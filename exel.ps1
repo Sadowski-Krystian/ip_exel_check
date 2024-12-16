@@ -12,7 +12,7 @@ if (-Not (Test-Path $InputFile)) {
 
 try {
     $IPAddresses = Import-Excel -Path $InputFile -WorksheetName $SheetName |
-                   Select-Object -First 5 -ExpandProperty 'Column1'
+                   Select-Object -First 5 -ExpandProperty 'Adresy'
 } catch {
     Write-Host "nie mozna odczytac pliku Excel lub arkusza $SheetName. Upewnij sie, ze plik istnieje i zawiera odpowiednie dane."
     exit 1
